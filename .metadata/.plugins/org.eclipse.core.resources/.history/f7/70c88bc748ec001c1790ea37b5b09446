@@ -1,0 +1,110 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JComboBox;
+import com.toedter.calendar.JDateChooser;
+import javax.swing.JSeparator;
+import java.awt.Color;
+
+public class librarySystem {
+
+	private JFrame frame;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					librarySystem window = new librarySystem();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public librarySystem() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		
+		String Sex[]= {"Male", "Female"};
+		frame = new JFrame();
+		frame.setBounds(100, 100, 919, 527);
+		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Name");
+		lblNewLabel.setFont(new Font("Mongolian Baiti", Font.PLAIN, 20));
+		lblNewLabel.setBounds(24, 12, 53, 29);
+		frame.getContentPane().add(lblNewLabel);
+		
+		textField = new JTextField();
+		textField.setColumns(10);
+		textField.setBounds(76, 10, 285, 31);
+		frame.getContentPane().add(textField);
+		
+		textField_1 = new JTextField();
+		textField_1.setColumns(10);
+		textField_1.setBounds(86, 51, 387, 34);
+		frame.getContentPane().add(textField_1);
+		
+		JComboBox cmbSex = new JComboBox(Sex);
+		cmbSex.setBounds(59, 142, 133, 34);
+		frame.getContentPane().add(cmbSex);
+		
+		textField_2 = new JTextField();
+		textField_2.setColumns(10);
+		textField_2.setBounds(121, 203, 240, 31);
+		frame.getContentPane().add(textField_2);
+		
+		JDateChooser dateChooser = new JDateChooser();
+		dateChooser.setBounds(96, 95, 193, 29);
+		frame.getContentPane().add(dateChooser);
+		
+		String x = dateChooser.getDate().toString();
+		
+		JLabel lblAddress = new JLabel("Address");
+		lblAddress.setFont(new Font("Mongolian Baiti", Font.PLAIN, 20));
+		lblAddress.setBounds(11, 51, 66, 31);
+		frame.getContentPane().add(lblAddress);
+		
+		JSeparator separator = new JSeparator();
+		separator.setForeground(Color.BLACK);
+		separator.setBackground(Color.BLACK);
+		separator.setBounds(11, 244, 905, 123);
+		frame.getContentPane().add(separator);
+		
+		JLabel lblBirthday = new JLabel("Birthday");
+		lblBirthday.setFont(new Font("Mongolian Baiti", Font.PLAIN, 20));
+		lblBirthday.setBounds(21, 93, 77, 31);
+		frame.getContentPane().add(lblBirthday);
+		
+		JLabel lblSex = new JLabel("Sex");
+		lblSex.setFont(new Font("Mongolian Baiti", Font.PLAIN, 20));
+		lblSex.setBounds(24, 143, 53, 31);
+		frame.getContentPane().add(lblSex);
+		
+		JLabel lblContactNo = new JLabel("Contact no#");
+		lblContactNo.setFont(new Font("Mongolian Baiti", Font.PLAIN, 20));
+		lblContactNo.setBounds(11, 203, 112, 29);
+		frame.getContentPane().add(lblContactNo);
+	}
+}

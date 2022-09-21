@@ -1,0 +1,44 @@
+import java.util.*;
+
+public class walaLang {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		System.out.println("---------------------------------");
+		System.out.println("           INPUT GRADES          ");
+		System.out.println("---------------------------------");
+
+		System.out.print("English : ");
+		int engGrade = input.nextInt();
+		System.out.print("Math    : ");
+		int mathGrade = input.nextInt();
+		System.out.print("Science : ");
+		int sciGrade = input.nextInt();
+		System.out.print("Computer: ");
+		int compGrade = input.nextInt();
+
+		double avg = (engGrade + mathGrade + sciGrade + compGrade) / 4;
+
+		System.out.println("Average: " + ("%.2f") + avg);
+
+		if (avg == 75 && avg <= 89.99) {
+			System.out.println("Passed!");
+
+		}
+		if (avg == 90 && avg <= 94.99) {
+			System.out.println("With Honors!");
+
+		} else if (avg == 95 && avg <= 97.99) {
+			System.out.println("With High Honors!");
+		} else if (avg == 98 & avg <= 100) {
+			System.out.println("With Highest Honors!");
+		} else if (avg > 100) {
+			System.out.println("No Such Grade!");
+		} else if (avg < 75) {
+			System.out.println("REPEAT GAGO!");
+		}
+	}
+
+}
+
+//("%.2f" + avg)

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.wb.internal.core.model.property.order.ReorderDialog">
+		<item key="x" value="700"/>
+		<item key="y" value="333"/>
+		<item key="width" value="520"/>
+		<item key="height" value="366"/>
+	</section>
+	<section name="org.eclipse.wb.internal.core.editor.actions.assistant.LayoutAssistantWindow">
+		<item key="x" value="916"/>
+		<item key="y" value="460"/>
+	</section>
+	<section name="org.eclipse.wb.internal.core.model.property.editor.string.StringPropertyDialog">
+		<item key="x" value="695"/>
+		<item key="y" value="343"/>
+		<item key="width" value="700"/>
+		<item key="height" value="440"/>
+	</section>
+	<section name="org.eclipse.wb.internal.core.editor.palette.dialogs.ImportArchiveDialog">
+		<item key="x" value="610"/>
+		<item key="y" value="259"/>
+		<item key="width" value="700"/>
+		<item key="height" value="502"/>
+		<list key="HISTORY_JAR_LIST">
+			<item value="C:\Users\caola\Downloads\Programs 2\jcalendar-1.4\lib\jcalendar-1.4.jar"/>
+			<item value="C:\Users\caola\Downloads\Programs 2\jdatepicker-1.3.4.jar"/>
+			<item value="C:\Users\caola\Downloads\Programs 2\jar_files\jdatepicker-2.0.3.jar"/>
+		</list>
+	</section>
+</section>

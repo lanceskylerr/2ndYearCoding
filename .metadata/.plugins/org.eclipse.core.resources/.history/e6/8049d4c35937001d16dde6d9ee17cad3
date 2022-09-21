@@ -1,0 +1,81 @@
+import java.util.*;
+
+public class ArrayAct {
+	static Scanner scanner = new Scanner(System.in);
+
+	static void displayArray(int[] arrN) {
+		for (int arr : arrN) {
+			System.out.print(arr + " ");
+		}
+	}
+
+	static void getValUser(int[] arrP) {
+		for (int i = 0; i < arrP.length; i++) {
+			System.out.print("Index" + i + ": ");
+			arrP[i] = scanner.nextInt();
+		}
+	}
+
+	public void arrayOrder(int[] arrP, String order) {
+		Arrays.sort(arrP);
+
+		if (order.equals("pababa")) {
+			for (int i = arrP.length - 1; i >= 0; i--) {
+				System.out.println(arrP[i]);
+			}
+		}
+		if (order.equals("pataas")) {
+			for (int i = 0; i < arrP.length; i++) {
+				System.out.println(arrP[i]);
+			}
+		}
+
+	}
+
+	public void getIndex(int[] arrP, int index) {
+		System.out.println(arrP[index]);
+	}
+
+	public static void main(String[] args) {
+		var maObj = new ArrayAct();
+		int len;
+		System.out.println("------------------------------------------------------------");
+		System.out.println(" Review on Class Method with Sort and Search Algorithms   ");
+		System.out.print("------------------------------------------------------------");
+		System.out.print("\nArray Length: ");
+		len = scanner.nextInt();
+		int[] arrN = new int[len];
+		getValUser(arrN);
+		System.out.print("------------------------------------------------------------");
+		System.out.print("[1] Display Array Elements [4] Display Index Value");
+		System.out.print("[2] Descending             [5] Exit ");
+		System.out.print("[3] Ascending Order");
+		System.out.print("------------------------------------------------------------");
+
+		while (true) {
+			System.out.println("Selection Transaction");
+			int select = scanner.nextInt();
+			if (select == 1) {
+				System.out.println("Display Array Elements");
+				displayArray(arrN);
+			} else if (select == 2) {
+				System.out.println("Descending Order");
+				maObj.arrayOrder(arrN, "pababa");
+			} else if (select == 3) {
+				System.out.println("Ascending Order");
+				maObj.arrayOrder(arrN, "pataas");
+			} else if (select == 4) {
+				System.out.println("Display Index Value");
+				int index = scanner.nextInt();
+				maObj.getIndex(arrN, index);
+			} else if (select == 5) {
+				break;
+			} else {
+				System.out.print("Invalid selection!");
+			}
+
+		}
+		System.out.print("\nEnd of Program");
+
+	}
+}

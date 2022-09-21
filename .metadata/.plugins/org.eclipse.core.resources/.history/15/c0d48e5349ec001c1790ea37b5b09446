@@ -1,0 +1,172 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.Font;
+import java.sql.Date;
+
+import javax.swing.JTextField;
+import javax.swing.JComboBox;
+import com.toedter.calendar.JDateChooser;
+import javax.swing.JSeparator;
+import java.awt.Color;
+import javax.swing.SwingConstants;
+
+public class librarySystem {
+
+	private JFrame frame;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+	private JTextField textField_3;
+	private JTextField textField_4;
+	private JTextField textField_5;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					librarySystem window = new librarySystem();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public librarySystem() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		
+		String Sex[]= {"Male", "Female"};
+		frame = new JFrame();
+		frame.setBounds(100, 100, 919, 527);
+		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Name");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Mongolian Baiti", Font.PLAIN, 20));
+		lblNewLabel.setBounds(0, 64, 77, 29);
+		frame.getContentPane().add(lblNewLabel);
+		
+		textField = new JTextField();
+		textField.setColumns(10);
+		textField.setBounds(76, 62, 285, 31);
+		frame.getContentPane().add(textField);
+		
+		textField_1 = new JTextField();
+		textField_1.setColumns(10);
+		textField_1.setBounds(485, 88, 387, 34);
+		frame.getContentPane().add(textField_1);
+		
+		JComboBox cmbSex = new JComboBox(Sex);
+		cmbSex.setBounds(485, 132, 133, 34);
+		frame.getContentPane().add(cmbSex);
+		
+		textField_2 = new JTextField();
+		textField_2.setColumns(10);
+		textField_2.setBounds(120, 156, 240, 31);
+		frame.getContentPane().add(textField_2);
+		
+		JDateChooser dateChooser = new JDateChooser();
+		dateChooser.setBounds(100, 105, 193, 29);
+		frame.getContentPane().add(dateChooser);
+		
+		Date x = (Date) dateChooser.getDate();
+		
+		JLabel lblAddress = new JLabel("Address");
+		lblAddress.setHorizontalAlignment(SwingConstants.CENTER);
+		lblAddress.setFont(new Font("Mongolian Baiti", Font.PLAIN, 20));
+		lblAddress.setBounds(398, 88, 87, 31);
+		frame.getContentPane().add(lblAddress);
+		
+		JSeparator separator = new JSeparator();
+		separator.setForeground(Color.BLACK);
+		separator.setBackground(Color.BLACK);
+		separator.setBounds(0, 398, 915, 7);
+		frame.getContentPane().add(separator);
+		
+		JLabel lblBirthday = new JLabel("Birthday");
+		lblBirthday.setHorizontalAlignment(SwingConstants.CENTER);
+		lblBirthday.setFont(new Font("Mongolian Baiti", Font.PLAIN, 20));
+		lblBirthday.setBounds(0, 103, 101, 31);
+		frame.getContentPane().add(lblBirthday);
+		
+		JLabel lblSex = new JLabel("Sex");
+		lblSex.setHorizontalAlignment(SwingConstants.CENTER);
+		lblSex.setFont(new Font("Mongolian Baiti", Font.PLAIN, 20));
+		lblSex.setBounds(398, 133, 87, 31);
+		frame.getContentPane().add(lblSex);
+		
+		JLabel lblContactNo = new JLabel("Contact no#");
+		lblContactNo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblContactNo.setFont(new Font("Mongolian Baiti", Font.PLAIN, 20));
+		lblContactNo.setBounds(0, 156, 122, 29);
+		frame.getContentPane().add(lblContactNo);
+		
+		JLabel lblCardNo = new JLabel("Card no#");
+		lblCardNo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblCardNo.setFont(new Font("Mongolian Baiti", Font.PLAIN, 20));
+		lblCardNo.setBounds(0, 260, 101, 29);
+		frame.getContentPane().add(lblCardNo);
+		
+		textField_3 = new JTextField();
+		textField_3.setColumns(10);
+		textField_3.setBounds(100, 260, 285, 31);
+		frame.getContentPane().add(textField_3);
+		
+		JSeparator separator_1 = new JSeparator();
+		separator_1.setForeground(Color.BLACK);
+		separator_1.setBackground(Color.BLACK);
+		separator_1.setBounds(0, 215, 915, 7);
+		frame.getContentPane().add(separator_1);
+		
+		JLabel lblNewLabel_1 = new JLabel("PERSONAL INFORMATION");
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setFont(new Font("Times New Roman", Font.PLAIN, 30));
+		lblNewLabel_1.setBounds(0, -2, 905, 54);
+		frame.getContentPane().add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_1_1 = new JLabel("CARD INFORMATION");
+		lblNewLabel_1_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_1.setFont(new Font("Times New Roman", Font.PLAIN, 30));
+		lblNewLabel_1_1.setBounds(0, 215, 905, 54);
+		frame.getContentPane().add(lblNewLabel_1_1);
+		
+		textField_4 = new JTextField();
+		textField_4.setColumns(10);
+		textField_4.setBounds(120, 299, 148, 31);
+		frame.getContentPane().add(textField_4);
+		
+		JLabel lblCardValidity = new JLabel("Card Validity");
+		lblCardValidity.setHorizontalAlignment(SwingConstants.CENTER);
+		lblCardValidity.setFont(new Font("Mongolian Baiti", Font.PLAIN, 20));
+		lblCardValidity.setBounds(0, 299, 122, 29);
+		frame.getContentPane().add(lblCardValidity);
+		
+		JLabel lblCardType = new JLabel("Card Type");
+		lblCardType.setHorizontalAlignment(SwingConstants.CENTER);
+		lblCardType.setFont(new Font("Mongolian Baiti", Font.PLAIN, 20));
+		lblCardType.setBounds(0, 340, 122, 29);
+		frame.getContentPane().add(lblCardType);
+		
+		textField_5 = new JTextField();
+		textField_5.setColumns(10);
+		textField_5.setBounds(120, 340, 285, 31);
+		frame.getContentPane().add(textField_5);
+	}
+}

@@ -1,0 +1,19 @@
+import java.util.*;
+public class Recap{
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        
+        String email[] = {"totoy@yahoo.com", "bimby@gmail.com", "josh@bing.com"};
+        String username[] = {"TotoyBato", "El Bimby", "JoshyPa2T"};
+        String password[] = {"matigasAko", "elChupakabra", "gayNaGay"};
+        
+        int i = 2;
+        System.out.println("Index   : " + i);
+        
+        
+        System.out.println("Email   : " + email[i]);
+        System.out.println("Username: " + username[i]);
+        System.out.println("Password: " + password[i]);
+        
+    }
+}
